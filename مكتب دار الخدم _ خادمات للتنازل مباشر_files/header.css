@@ -1,0 +1,139 @@
+/* استايل الهيدر */
+.navbar {
+    font-family: 'Cairo', Arial, sans-serif;
+    font-size: 1.1rem;
+    background: #2cbcdc;
+    box-shadow: 0 2px 16px #b9d4ee22;
+    border-radius: 0 0 24px 24px;
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+    width: 150%;
+    transition: box-shadow 0.2s, background 0.2s;
+}
+.navbar-brand {
+    color: #3f51b5 !important;
+    font-size: 2rem;
+    letter-spacing: 1.5px;
+    background: linear-gradient(90deg, #3f51b5 30%, #2cbcdc 90%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+}
+.navbar-nav .nav-link.active, .navbar-nav .nav-link:hover {
+    color: #00bcd4 !important;
+    font-weight: bold;
+    background: #f3f7ff;
+    border-radius: 10px;
+    transition: background 0.2s;
+    text-align: center;
+    display: flex;
+    justify-content: center
+}
+/* توسيط عناصر التنقل داخل الهيدر */
+.navbar .navbar-collapse {
+    display: flex !important;
+    justify-content: center;
+}
+
+.navbar-nav {
+    display: flex;
+    gap: 10px;
+    margin: 0 auto;
+}
+.navbar {
+    display: flex;
+}
+
+.navbar-brand {
+    margin-left: auto;
+}
+
+.navbar-collapse {
+    flex-grow: 0;
+    margin: 0 auto;
+}
+.hero-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.hero-logo {
+    height: 60px;
+    width: auto;
+    vertical-align: middle;
+}
+@media (max-width: 768px) {
+    .hero-logo {
+        height: 30px;
+    }
+}
+/* الهيدر */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* اللوجو يمين */
+.navbar-logo {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0;
+}
+
+.navbar-logo img {
+    height: 80px;
+    width: auto;
+}
+
+/* توسيط روابط التنقل */
+.navbar-collapse {
+    justify-content: center !important;
+}
+
+.navbar-nav {
+    margin: 0 auto;
+    gap: 10px;
+}
+
+/* موبايل */
+@media (max-width: 991px) {
+    .navbar-logo {
+        position: static;
+        transform: none;
+        margin-right: auto;
+    }
+
+    .navbar-collapse {
+        justify-content: flex-start !important;
+    }
+}
+/* الهيدر الأساسي */
+.navbar {
+    font-family: 'Cairo', Arial, sans-serif;
+    background: #2cbcdc;
+    box-shadow: 0 2px 16px #b9d4ee22;
+    border-radius: 0 0 24px 24px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    width: 100%;
+    
+    /* المهم هنا */
+    min-height: 110px;   /* يكفي لوجو 80px */
+    height: auto;
+    
+    display: flex;
+    align-items: center;
+    transition: box-shadow 0.2s, background 0.2s;
+}
+
