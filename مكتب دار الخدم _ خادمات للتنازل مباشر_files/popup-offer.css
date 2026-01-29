@@ -1,0 +1,91 @@
+/* استايل نافذة عرض اليوم العائمة */
+.popup-offer-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(30,40,60,0.38);
+  z-index: 1100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeInBg 0.4s;
+}
+@keyframes fadeInBg { from{opacity:0;} to{opacity:1;} }
+.popup-offer {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 8px 48px #1976d244, 0 1.5px 8px #00bcd455;
+  max-width: 96vw;
+  width: 390px;
+  padding: 0 0 18px 0;
+  position: relative;
+  animation: popIn 0.5s cubic-bezier(.8,-0.2,.3,1.4);
+}
+@keyframes popIn { from{transform:scale(.8);opacity:0;} to{transform:scale(1);opacity:1;} }
+.popup-offer img {
+  width: 100%;
+  border-radius: 14px 14px 0 0;
+  display: block;
+  max-height: 260px;
+  object-fit: cover;
+}
+.popup-offer a.offer-link {
+  display: block;
+  margin: 18px auto 0 auto;
+  background: linear-gradient(90deg,#1976d2 0%,#00bcd4 100%);
+  color: #fff;
+  font-weight: 700;
+  padding: 10px 0;
+  border-radius: 8px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.11rem;
+  letter-spacing: 0.01em;
+  box-shadow: 0 2px 8px #00bcd422;
+  transition: background 0.18s;
+}
+.popup-offer a.offer-link:hover {
+  background: linear-gradient(90deg,#00bcd4 0%,#1976d2 100%);
+}
+.popup-offer .close-btn {
+  position: absolute;
+  left: 12px;
+  top: 12px;
+  background: #e74c3c;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  font-size: 1.3em;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px #e74c3c33;
+  transition: background 0.15s;
+  z-index: 2;
+}
+.popup-offer .close-btn:hover {
+  background: #c0392b;
+}
+@media (max-width: 500px) {
+  .popup-offer {
+    width: 98vw;
+    max-width: 98vw;
+    padding: 0 0 10px 0;
+  }
+  .popup-offer img {
+    max-height: 180px;
+  }
+  .popup-offer a.offer-link {
+    font-size: 1rem;
+    padding: 9px 0;
+  }
+  .popup-offer .close-btn {
+    width: 28px;
+    height: 28px;
+    font-size: 1.1em;
+    left: 7px;
+    top: 7px;
+  }
+}

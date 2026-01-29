@@ -1,0 +1,87 @@
+/* استايل آراء العملاء */
+.testimonial-card {
+    border-radius: 18px;
+    min-width: 220px;
+    max-width: 420px;
+    min-height: 90px;
+    margin: 0 auto 18px auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    box-shadow: 0 8px 28px #00bcd455;
+    background: linear-gradient(120deg,#fff 70%,#e3f2fd 100%);
+    padding: 18px 18px 14px 18px;
+    transition: box-shadow 0.2s, transform 0.2s;
+    position: relative;
+    overflow: hidden;
+    gap: 12px;
+}
+.testimonial-card:hover {
+    box-shadow: 0 16px 32px #00bcd477, 0 1.5px 10px #1976d233;
+    transform: translateY(-3px) scale(1.025);
+}
+.testimonial-card img {
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    margin-left: 16px;
+    margin-bottom: 0;
+    box-shadow: 0 2px 8px #00bcd422;
+}
+.testimonial-card .testimonial-name {
+    font-weight: 600;
+    color: #1976d2;
+    font-size: 1.07em;
+    line-height: 1.2;
+    text-align: right;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+}
+.testimonial-card .testimonial-comment {
+    color: #444;
+    font-size: 0.97em;
+    line-height: 1.6;
+    text-align: right;
+    padding-top: 4px;
+    width: 100%;
+    direction: rtl;
+}
+@media (max-width: 600px) {
+    .testimonial-card {
+        flex-direction: column;
+        width: 100%;
+        min-width: 0;
+        max-width: 100%;
+        padding: 14px 4px 12px 4px;
+        align-items: center;
+    }
+    .testimonial-card img {
+        width: 54px !important;
+        height: 54px !important;
+        margin-left: 0 !important;
+        margin-bottom: 10px !important;
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .testimonial-card .testimonial-name {
+        font-size: 1.1em;
+        margin-bottom: 4px;
+        text-align: center;
+        white-space: normal;
+        width: 100%;
+    }
+    .testimonial-card .testimonial-comment {
+        font-size: 0.97em;
+        line-height: 1.7;
+        padding: 0 2px;
+        text-align: center;
+        margin-top: 2px;
+        word-break: break-word;
+        white-space: normal;
+    }
+}
